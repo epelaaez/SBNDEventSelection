@@ -1,0 +1,6 @@
+# virtual environment 
+.venv/
+
+# python stuff
+__pycache__/
+.ipynb_checkpoints/
