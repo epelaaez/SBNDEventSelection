@@ -1,6 +1,13 @@
-# virtual environment 
+# virtual environment/vscode
 .venv/
+settings.json
 
 # python stuff
 __pycache__/
 .ipynb_checkpoints/
+
+# c++/root generated
+*.d
+*.so
+*.pcm
+Selection_C_ACLiC*.h
