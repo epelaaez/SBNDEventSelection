@@ -16,7 +16,7 @@ to set up the `sbnana` feature branch used in this codebase. Once this is done, 
 source activate_cafana.sh
 ```
 
-to activate your local `sbnana` build.
+to activate your local `sbnana` build every time you start a new terminal.
 
 ### Running event selection
 
@@ -25,3 +25,5 @@ To perform the event selection, you have to run
 ```bash
 cafe -bq Scripts/Selection.C
 ```
+
+This will generate the cuts defined in `Definitions.h` and will produce the corresponding figures under `Figs/`.

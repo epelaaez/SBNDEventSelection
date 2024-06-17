@@ -58,6 +58,14 @@ void Selection()
                 kNoSpillCut,                 // The SpillCut to use (none in this case).
                 kIsNuMuCC );                 // The Cut to use (only true nu mu CC slices).
 
+    // Create a simple Spectrim showing the primary neutrino energy of slices in fiducial volume.
+    Spectrum sNuEnergySignal( "True Neutrino Energy [GeV]",
+                bPrimaryEnergy, // Use 20 bins from 0.0 to 3.0 GeV
+                NuLoader,       // Associate this Spectrum with the NuLoader object (and its target CAF)
+                kTrueEnergy,    // The TruthVar to plot
+                kIsSignal,      // The TruthCut to use (signal definition)
+                kNoSpillCut );  // The SpillCut to use (none)
+
     // Now that each Spectrum is defined, use the Go() method to populate the Spectrum objects.
     NuLoader.Go();
 
@@ -65,12 +73,14 @@ void Selection()
     std::vector<Spectrum> Spectra{
         sNuEnergy,
         sNuEnergyNoCRT,
-        sTrackLen
+        sTrackLen,
+        sNuEnergySignal
     };
     std::vector<TString> PlotNames{
         "sNuEnergy",
         "sNuEnergyNoCRT",
-        "sTrackLen"
+        "sTrackLen",
+        "sNuEnergySignal"
     };
     const int nSpectra = Spectra.size();
 
