@@ -1,5 +1,7 @@
 # SBND Event Selection
 
+**Note: this code was merged into the [CC1muAnalysis](https://github.com/epelaaez/CC1muAnalysis) repo.**
+
 CAFAna is used to perform event selection on flat `caf` files. The specific event selection is one muon, two protons, and no pions. 
 
 ### Setting up
